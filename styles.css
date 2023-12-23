@@ -1,0 +1,224 @@
+.container {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 2fr 1fr 1fr 1fr 1fr;
+    gap: 10px 0px;
+    grid-template-areas:
+        ". header header header ."
+        ". buttons buttons buttons ."
+        ". canvas canvas canvas ."
+        ". first-article-top . second-article-top ."
+        ". first-bottom second-bottom third-bottom ."
+        ". logos logos logos ."
+        "footer footer footer footer footer";
+
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . ."
+        ". . ."
+        "logo . search";
+    grid-area: header;
+}
+
+.logo {
+    grid-area: logo;
+    height: 50px;
+    width: 50px;
+}
+
+.buttons {
+    grid-area: buttons;
+    place-self: center;
+}
+
+.slider {
+    display: grid;
+    grid-area: canvas;
+    background: rgb(196, 196, 196);
+    grid-template-areas:
+        ". . ."
+        ". . ."
+        ". . ."
+        "buttons buttons buttons";
+}
+
+
+.canvas-buttons {
+    grid-area: buttons;
+    background: #e3e3e3;
+    height: 100px;
+    display: flex;
+    place-content: space-between;
+    border-top: 1px solid rgb(149, 149, 149);
+    border-bottom: 1px solid rgb(149, 149, 149);
+    align-self: end;
+}
+
+.canvas-button {
+    width: 200px;
+    height: 100px;
+    border: none;
+    background: #e3e3e3;
+    font-size: 25px;
+}
+
+.canvas-button:active {
+    color: cyan;
+}
+
+.top-article-first {
+    grid-area: first-article-top;
+
+}
+
+.top-article-header {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+
+
+.title {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 23px;
+}
+
+.top-article-article {
+    display: flex;
+}
+
+.square {
+    height: 25px;
+    width: 25px;
+    background: cyan;
+}
+
+.big-square {
+    height: 150px;
+    width: 150px;
+    background: gray;
+    margin-right: 25px;
+
+}
+
+.article-text {
+    width: 250px;
+}
+
+.line {
+    height: 25px;
+    width: 250px;
+    background-image: linear-gradient(135deg, #6c6c6c 25%, transparent 25%, transparent 50%, #6c6c6c 50%, #6c6c6c 75%, transparent 75%, #fff);
+    background-size: 5px 5px;
+}
+
+.top-article-second {
+    grid-area: second-article-top;
+}
+
+.bottom-article-first {
+    grid-area: 5 / 2 / 6 / 3;
+}
+
+.bottom-article-header {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.bottom-article-text {
+    width: 450px
+}
+
+.bottom-line {
+    height: 25px;
+    width: 300px;
+    background-image: linear-gradient(135deg, #6c6c6c 25%, transparent 25%, transparent 50%, #6c6c6c 50%, #6c6c6c 75%, transparent 75%, #fff);
+    background-size: 5px 5px;
+}
+
+.bottom-article-second {
+    grid-area: second-bottom;
+}
+
+.mid-square {
+    height: 50px;
+    width: 50px;
+    background: gray;
+    margin-right: 15px;
+}
+
+.mini-article {
+    display: flex;
+    margin-bottom: 20px;
+
+}
+
+.bottom-mini-article-text {
+    width: 380px
+}
+
+.bottom-article-third {
+    grid-area: third-bottom;
+}
+
+.logos {
+    grid-area: logos;
+}
+
+.logos-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer {
+    grid-area: footer;
+    height: 200px;
+    background: darkgray;
+    row-gap: 0;
+    padding-bottom: 70px;
+}
+
+.buttons-buttons {
+    height: 50px;
+    width: 174px;
+    border: none;
+    cursor: pointer;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+
+}
+
+.buttons-buttons:active {
+    background: cyan;
+}
+
+input {
+    height: 25px;
+    grid-area: search;
+    width: 200px;
+    place-self: end;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}
+
+.logos-line {
+    height: 25px;
+    background-image: linear-gradient(135deg, #6c6c6c 25%, transparent 25%, transparent 50%, #6c6c6c 50%, #6c6c6c 75%, transparent 75%, #fff);
+    background-size: 5px 5px;
+    width: 1250px;
+}
+
+.logos-head {
+    display: flex;
+    margin-bottom: 30px;
+}
